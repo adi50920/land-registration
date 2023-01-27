@@ -1,51 +1,79 @@
-.emblem{
-    width: 5rem;
-    padding-right: 2rem;
+.background {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(./images/background.png);
+  background-size: cover;
 }
 
-.landingPage-heading-div{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 2rem;
+.emblem {
+  width: 5rem;
+  padding-right: 2rem;
+  position: absolute;
+  top: 7%;
+  right: 0%;
 }
 
-.landingPage-btn, .update-btn{
-    padding: 1rem 6rem;
-    margin-top: 4rem;
-    font-size: 1rem;
-    border-radius: 10px;
-    outline: none !important;
-    border: none !important;
-    background-color: rgb(28, 199, 28);
-    color: white;
-    cursor: pointer;
-    font-weight: 600;
+.landingPage-heading-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.welcome-p{
-    margin-top: 5rem;
-    font-size: 2.4rem;
-    width: 50%;
+.landingPage-btn {
+  padding: 0.5rem 2rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  border-radius: 2px;
+  outline: none !important;
+  border: black solid 2px !important;
+  background-color: rgba(18, 18, 18, 0.08);
+  color: black;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.update-btn {
+  padding: 0.3rem 4rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  outline: none !important;
+  border: none !important;
+  background-color: #00c625;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.welcome-p {
+  margin-top: 2rem;
+  font-size: 2.4rem;
+  width: 50%;
+  font-weight: 600;
+}
+.bold {
+  margin-top: 5rem;
+  font-weight: 700 !important;
+  font-size: 3.4rem !important;
 }
 
 /* small devices */
-@media screen and (max-width: 400px){
-    
-    .landingPage-mainDiv{
-        padding: 0 2rem;
-    }
+@media screen and (max-width: 400px) {
+  .landingPage-mainDiv {
+    padding: 0 2rem;
+  }
 
-    .welcome-p{
-        width: 86%;
-    }
+  .welcome-p {
+    width: 86%;
+  }
 
-    .landingPage-btn{
-        font-size: 1.5rem;
-        padding: 1rem 3rem;
-    }
+  .landingPage-btn {
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+  }
 
-    html{
-        font-size: 80%;
-    }
+  html {
+    font-size: 80%;
+  }
 }
