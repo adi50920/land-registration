@@ -1,8 +1,22 @@
-.registerLand-maindiv{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+.registerLand-maindiv {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-.registerLand-maindiv .form-control{
-    width: 90%;
+.registerLand-maindiv .form-control {
+  width: 100%;
+}
+.admin-background {
+  background-color: #0b1920;
+  padding-top: 0rem;
+}
+.container-box {
+  color: white;
+  border: 2px solid white;
+  border-radius: 1rem;
+  padding: 3rem !important;
+}
+.register-btn {
+  width: 50% !important;
+  margin: 1rem auto;
 }

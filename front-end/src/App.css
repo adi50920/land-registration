@@ -4,19 +4,25 @@
   background-image: url(./images/background.png);
   background-size: cover;
 }
-
+/* 
 .emblem {
   width: 5rem;
   padding-right: 2rem;
   position: absolute;
   top: 7%;
   right: 0%;
+} */
+.emblem {
+  width: 5rem;
+  padding-right: 2rem;
 }
 
 .landingPage-heading-div {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-top: 1rem;
 }
 
 .landingPage-btn {
@@ -47,13 +53,13 @@
 }
 
 .welcome-p {
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-size: 2.4rem;
   width: 50%;
   font-weight: 600;
 }
 .bold {
-  margin-top: 5rem;
+  margin-top: 3rem;
   font-weight: 700 !important;
   font-size: 3.4rem !important;
 }

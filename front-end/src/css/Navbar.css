@@ -1,17 +1,31 @@
-.navbar{
-    padding: 1rem 4rem;
+.navbar {
+  padding: 1rem 4rem;
+  background-color: #0b1920 !important;
+  /* position: absolute;
+  top: 0;
+  width: 100%; */
+}
+.emblem {
+  -webkit-filter: grayscale(1) invert(1);
+  filter: grayscale(1) invert(1);
+}
+.nav-item {
+  margin-left: 2rem;
+}
+.nav-link {
+  color: #fff !important;
 }
 
-.nav-item{
-    margin-left: 2rem;
+.active {
+  font-weight: 500;
+  color: #00c625 !important;
 }
 
-.active{
-    font-weight: 500;
+.navbar-toggler {
+  background-color: white;
 }
-
-@media screen and (max-width: 400px){
-    .navbar{
-        padding: 0.5rem 1rem;
-    }
+@media screen and (max-width: 400px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
 }

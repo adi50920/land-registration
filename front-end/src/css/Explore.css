@@ -1,55 +1,86 @@
-.explore-maindiv{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+.explore-maindiv {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-.explore-maindiv .form-control{
-    width: 90%;
+.explore-maindiv .form-control {
+  width: 90%;
+}
+.explore-background {
+  background-color: #0b1920;
+  min-height: 100vh;
 }
 
-.explore-result{
-    margin-top: 4rem;
-    width: 100%;
-    border: 2px solid rgb(160, 158, 158);
-    padding: 1rem;
-    border-radius: 5px;
+.explore-result {
+  margin-top: 4rem;
+  /* width: 100%; */
+  border: 2px solid white;
+  padding: 1rem !important;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #0b1920;
+  color: white;
 }
 
-.explore-result p{
-    margin-bottom: 0.8rem;
+.explore-result p {
+  margin-bottom: 0.8rem;
 }
 
-.buy-btn, .no-sale, .req-pending, .marked-sale, .mark-available-btn, .marked-available, .accept-req{
-    width: 100%;
-    border: none;
-    outline: none !important;
-    padding: 0.5rem;
-    color: white;
-    border-radius: 5px;
+.buy-btn,
+.no-sale,
+.req-pending,
+.marked-sale,
+.mark-available-btn,
+.marked-available,
+.accept-req {
+  width: 100%;
+  border: none;
+  outline: none !important;
+  padding: 0.7rem;
+  color: white;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
 }
 
-.marked-sale{
-    background-color: rgb(28, 199, 28);
+.marked-sale {
+  background-color: rgb(28, 199, 28);
 }
 
-.buy-btn, .mark-available-btn, .accept-req{
-    background-color: rgb(28, 199, 28);
-    cursor: pointer;
-    outline: none;
+.explore-form-btn {
+  color: white;
+  background-color: #00c6c6;
+  padding: 0.5rem 4rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 0.8rem;
+}
+.buy-btn,
+.mark-available-btn,
+.accept-req {
+  background-color: rgb(28, 199, 28);
+  cursor: pointer;
+  outline: none;
+}
+.display-explore {
+}
+.req-pending,
+.marked-available {
+  background-color: rgb(158, 235, 158);
 }
 
-.req-pending, .marked-available{
-    background-color: rgb(158, 235, 158) ;
+.no-sale {
+  background-color: red;
+  border-radius: 1rem;
 }
 
-.no-sale{
-    background-color: red;
+.no-result-div {
+  /* margin-top: 4rem; */
 }
 
-.no-result-div{
-    margin-top: 4rem;
-}
-
-.no-result{
-    font-size: 2rem;
+.no-result {
+  font-size: 2rem;
+  color: white;
 }

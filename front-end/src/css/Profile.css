@@ -1,24 +1,34 @@
-.profile-main-div{
-    margin-top: 2rem;
+.profile-main-div {
+  margin-top: 2rem;
+  color: white;
 }
 
-.profile-main-div .form-group label{
-    margin-top: 1rem;
+.profile-main-div .form-group label {
+  margin-top: 1rem;
+}
+.profile-background {
+  background-color: #0b1920;
+  min-height: 84.7vh;
+  width: 100%;
+}
+.profile-main-div label {
+  margin-top: 1.5rem;
 }
 
-.profile-main-div label{
-    margin-top: 1.5rem;
+.profile-main-div button {
+  margin-top: 1.8rem;
 }
 
-.profile-main-div button{
-    margin-top: 1.8rem;
+.select-gender {
+  width: 90%;
+  padding: 0.6rem;
+  outline: none !important;
+  border-color: rgb(199, 197, 197);
+  border-radius: 5px;
 }
-
-.select-gender{
-    width: 90%;
-    padding: 0.6rem;
-    outline: none !important;
-    border-color: rgb(199, 197, 197);
-    border-radius: 5px;
+.update-form-background {
+  background-color: #0b1920;
 }
-
+.admin-form {
+  color: white;
+}

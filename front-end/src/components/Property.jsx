@@ -1,102 +1,121 @@
-import React, { useEffect, useState } from 'react'
-import DisplayLandDetails from './DisplayLandDetails';
+import React, { useEffect, useState } from "react";
+import DisplayLandDetails from "./DisplayLandDetails";
+import "../css/property.css";
 
 const Property = (props) => {
-
   const { provider, web3, contract } = props.myWeb3Api;
   const account = props.account;
 
-  const [landDetailList, setLandDetailList] = useState([])
+  const [landDetailList, setLandDetailList] = useState([]);
 
   const [length, setLength] = useState(0);
   const [reload, setReload] = useState(0);
   const detailsArr = [];
 
-
-  useEffect(()=>{
-
-    const getProperty = async () =>{
-      const _indices = await contract.getIndices({from: account});
+  useEffect(() => {
+    const getProperty = async () => {
+      const _indices = await contract.getIndices({ from: account });
       const _totalIndices = _indices[0].words[0];
 
-      for(let i=0; i<_totalIndices; i++){
-        const ownerOwns = await contract.getOwnerOwns(i, {from: account});  // returns object
-        
+      for (let i = 0; i < _totalIndices; i++) {
+        const ownerOwns = await contract.getOwnerOwns(i, { from: account }); // returns object
+
         // if survey no. != 0
-        if(ownerOwns[3].words[0] != 0){
-            const landDetails = await contract.getLandDetails(ownerOwns[0], ownerOwns[1], ownerOwns[2], ownerOwns[3].words[0], {
-              from: account
-            })
-            console.log(landDetails)
+        if (ownerOwns[3].words[0] != 0) {
+          const landDetails = await contract.getLandDetails(
+            ownerOwns[0],
+            ownerOwns[1],
+            ownerOwns[2],
+            ownerOwns[3].words[0],
+            {
+              from: account,
+            }
+          );
+          console.log(landDetails);
 
-            const isAvaliable = await contract.isAvailable(ownerOwns[0], ownerOwns[1], ownerOwns[2], ownerOwns[3].words[0], {
-              from: account
-            })
+          const isAvaliable = await contract.isAvailable(
+            ownerOwns[0],
+            ownerOwns[1],
+            ownerOwns[2],
+            ownerOwns[3].words[0],
+            {
+              from: account,
+            }
+          );
 
-            const landLongitudeLatitude = await contract.getLandLongitudeLatitude(ownerOwns[0], ownerOwns[1], ownerOwns[2], ownerOwns[3].words[0], {
-              from: account
-            })
-            console.log(landLongitudeLatitude)
-            
-            const longitude = landLongitudeLatitude[0];
-            const latitude = landLongitudeLatitude[1];
+          const landLongitudeLatitude = await contract.getLandLongitudeLatitude(
+            ownerOwns[0],
+            ownerOwns[1],
+            ownerOwns[2],
+            ownerOwns[3].words[0],
+            {
+              from: account,
+            }
+          );
+          console.log(landLongitudeLatitude);
 
-            const landDetails2 = {state: ownerOwns[0], district: ownerOwns[1], city: ownerOwns[2], surveyNo: ownerOwns[3].words[0], longitude, latitude, isAvaliable}
-            let allDetails = {...landDetails, ...landDetails2}
-            detailsArr.push(allDetails);
+          const longitude = landLongitudeLatitude[0];
+          const latitude = landLongitudeLatitude[1];
+
+          const landDetails2 = {
+            state: ownerOwns[0],
+            district: ownerOwns[1],
+            city: ownerOwns[2],
+            surveyNo: ownerOwns[3].words[0],
+            longitude,
+            latitude,
+            isAvaliable,
+          };
+          let allDetails = { ...landDetails, ...landDetails2 };
+          detailsArr.push(allDetails);
         }
       }
       setLandDetailList(detailsArr);
-      setLength(detailsArr.length)
-      console.log(detailsArr)
-    }
+      setLength(detailsArr.length);
+      console.log(detailsArr);
+    };
 
     getProperty();
+  }, [reload]);
 
-  }, [reload])
-
-
-  const markAvailableFunction = async (indx) =>{
-      await contract.markMyPropertyAvailable(indx, {from: account});
-      setReload(!reload);
-      console.log(indx);
-  }
-
-
+  const markAvailableFunction = async (indx) => {
+    await contract.markMyPropertyAvailable(indx, { from: account });
+    setReload(!reload);
+    console.log(indx);
+  };
 
   return (
-    <div className='container' style={{marginBottom: '2rem'}}>
-        {  
-        (length == 0) ? 
-        <div className="no-result-div">
-          <p className='no-result'>No properties found :(</p>
-        </div>
-        :
-          landDetailList.map((details, index) =>{
-            return(
+    <div className="property-background d-flex justify-content-center align-items-center p-0 m-0">
+      <div className="container property-container p-0 m-0 ">
+        {length == 0 ? (
+          <div className="no-result-div">
+            <p className="no-result">No properties found :(</p>
+          </div>
+        ) : (
+          landDetailList.map((details, index) => {
+            return (
               <DisplayLandDetails
-                 
-                key = {index}
-                owner = {details[0]}
-                propertyId = {details[1].words[0]}
-                index = {details[2].words[0]}
-                marketValue = {details[3].words[0]}
-                sqft = {details[4].words[0]}
-                state = {details.state}
-                district = {details.district}
-                city = {details.city}
-                surveyNo = {details.surveyNo}
-                available = {details.isAvaliable}
-                markAvailable = {markAvailableFunction}
-                longitude = {details.longitude}
-                latitude = {details.latitude}
+                key={index}
+                owner={details[0]}
+                propertyId={details[1].words[0]}
+                index={details[2].words[0]}
+                marketValue={details[3].words[0]}
+                sqft={details[4].words[0]}
+                state={details.state}
+                district={details.district}
+                city={details.city}
+                surveyNo={details.surveyNo}
+                available={details.isAvaliable}
+                markAvailable={markAvailableFunction}
+                longitude={details.longitude}
+                latitude={details.latitude}
               />
-            )
+            );
           })
-        } 
-      
+        )}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Property
+export default Property;

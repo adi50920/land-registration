@@ -1,52 +1,103 @@
-.superAdmin-heading-div{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 2rem;
+.superAdmin-p {
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: white;
+}
+.left-background {
+  background-color: #1d4053;
+  width: 100%;
+  min-height: 100vh;
+  padding: 6rem 15%;
+}
+.admin-form {
+  display: flex;
+  flex-direction: column;
+}
+.right-background {
+  border: 2px solid black;
+  border-radius: 1.3rem;
+  padding: 5%;
+  width: 50%;
+}
+.form-container {
+  min-height: 100vh;
+}
+.left-background h1 {
+  color: white;
+}
+.admin-form input {
+  width: 100%;
+  margin-top: 0.4rem;
+}
+.superAdmin-heading-div {
+  z-index: 3;
+  position: absolute;
+  top: 2%;
+  left: 1%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end !important;
+  justify-content: flex-end !important;
+  width: 5rem;
 }
 
-.superAdmin-p{
-    font-size: 1.5rem;
-    margin-top: 2rem;
+.cirlces {
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 30%;
+  max-width: 20rem;
+  height: auto;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.6rem;
+}
+.superAdmin-mainDiv label {
+  color: black !important;
+}
+.form-control {
+  /* width: 50%; */
+  padding: 0.6rem;
+  outline: none;
+  margin: none;
+  background-color: #f1f1f1;
+}
+.form-group label {
+  font-weight: 500;
+}
+.admin-form-btn {
+  padding: 0.8rem 1rem !important;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  outline: none !important;
+  border: none !important;
+  background-color: #1d4053;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.admin-form{
-    display: flex;
-    flex-direction: column;
+.superAdmin-mainDiv {
+  margin-bottom: 0rem;
+  overflow-x: hidden;
 }
-
-.form-group{
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.6rem;
-}
-
-.form-control{
-    width: 50%;
-    padding: 0.6rem;
-    outline: none;
-    margin: none;
-}
-
-.admin-form-btn{
-    padding: 0.8rem 4rem;
-    margin-top: 1.5rem;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    outline: none !important;
-    border: none !important;
-    background-color: rgb(30, 152, 223);
-    color: white;
-    cursor: pointer;
-}
-
-.superAdmin-mainDiv{
-    margin-bottom: 4rem;
-}
-
 /* small devices */
-@media screen and (max-width: 400px){
-    .form-control{
-        width: 90%;
-    }
+@media screen and (max-width: 400px) {
+  .form-control {
+    width: 90%;
+  }
+  .left-background {
+    padding: 6rem 10%;
+  }
+}
+@media screen and (max-width: 770px) {
+  .emblem {
+    filter: none !important;
+  }
+  .right-background {
+    width: 70%;
+  }
 }
