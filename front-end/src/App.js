@@ -83,12 +83,11 @@ function App() {
         element={
           <div className="App">
             <div className="background">
+              <div className="landingPage-heading-div">
+                <img src={emblem} alt="emblem" className="emblem" />
+                {/* <h1>Decentralized Land Registration</h1> */}
+              </div>
               <div className="container mainDiv">
-                <div className="landingPage-heading-div">
-                  <img src={emblem} alt="emblem" className="emblem" />
-                  {/* <h1>Decentralized Land Registration</h1> */}
-                </div>
-
                 <p className="welcome-p bold">Welcome to</p>
                 <p className="welcome-p">
                   Online Land Registration and transfer of entitlement

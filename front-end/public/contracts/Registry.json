@@ -33199,12 +33199,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x05D9f19eEaF935C292F59E8aC6c596891A9b74Fe",
-      "transactionHash": "0x75e95ac9befa584449a7a36bc3117b2d362d9f10a1481c3a56d49fac2a2ccb5b"
+      "address": "0x7974704d6FA4bB6A919Fc3AA4AbC1cfD9B4d4FF5",
+      "transactionHash": "0xdb2a12c55bd83e1cdb3692b8c79bc926fe78dc613911d2da0573f78524deaa39"
     }
   },
   "schemaVersion": "3.4.11",
-  "updatedAt": "2023-01-31T14:34:10.383Z",
+  "updatedAt": "2023-02-02T14:50:30.886Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

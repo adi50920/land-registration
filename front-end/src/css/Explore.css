@@ -64,8 +64,7 @@
   cursor: pointer;
   outline: none;
 }
-.display-explore {
-}
+
 .req-pending,
 .marked-available {
   background-color: rgb(158, 235, 158);
@@ -74,10 +73,6 @@
 .no-sale {
   background-color: red;
   border-radius: 1rem;
-}
-
-.no-result-div {
-  /* margin-top: 4rem; */
 }
 
 .no-result {

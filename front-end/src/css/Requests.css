@@ -1,5 +1,6 @@
 .requests-background {
   background-color: #0b1920;
   width: 100%;
-  min-height: 84.7vh;
+  min-height: 100vh;
+  overflow-y: hidden;
 }
