@@ -1,6 +1,9 @@
 import React from "react";
+import { API_KEY } from "../config";
 
 const DisplayExploreResult = (props) => {
+  const lat = props.latitude;
+  const long = props.longitude;
   return (
     <>
       {props.propertyId != 0 ? ( // propertyId != 0 means we got a result while exploring.
@@ -26,7 +29,12 @@ const DisplayExploreResult = (props) => {
           <p>
             <b>Latitude:</b> {props.latitude}
           </p>
-
+          <iframe
+            style={{ border: "none", borderRadius: "18px" }}
+            src={`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${lat},${long}`}
+            width="100%"
+            height="450"
+          ></iframe>
           {props.available ? ( // if land is marked for sale.
             props.isAdmin || props.isOwner ? ( // isOwner means "is Owner exploring its own land?"
               // if owner is exploring its own land, then, owner CANNOT request its own land, hence "Marked for sale" will be displayed only.
